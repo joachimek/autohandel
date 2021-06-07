@@ -1,0 +1,16 @@
+volkswagen/golf
+volkswagen/polo
+volkswagen/passat
+volkswagen/tiguan
+volkswagen/sharan
+
+
+public String toString() {
+        return "DANE AUTA: " +
+                "\n\tcena: " + value +
+                "\n\tmarka: " + brand +
+                "\n\tmodel: " + model +
+                "\n\tprzebieg: " + mileage +
+                "\n\tkolor: "  + color +
+                "\n\tsegment: " + segment;
+    }
