@@ -1,5 +1,6 @@
 package vehicleGenerators;
 
+import vehicles.Car;
 import vehicles.Vehicle;
 
 import java.util.Random;
@@ -16,8 +17,7 @@ public class CarCreator extends VehicleCreator{
         Random generator = new Random();
         stockRadio = generator.nextBoolean();
     }
-    public CarCreator(String carID) {
-        super(carID);
+    public void setCarParameters(){
         assignModel();
         setYearOfProduction();
         setMileage();
@@ -26,7 +26,12 @@ public class CarCreator extends VehicleCreator{
         setAirConditioning();
         setStockRadio();
     }
+    public CarCreator(String carID) {
+        super(carID);
+        setCarParameters();
+    }
     public Vehicle Create(){
-        return new Vehicle(carID,value,brand,model,mileage,color,segment,yearOfProduction);
+        setCarParameters();
+        return new Car(carID,value,brand,model,mileage,color,segment,yearOfProduction,airConditioning,stockRadio);
     }
 }

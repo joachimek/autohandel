@@ -55,11 +55,11 @@ public class VehicleCreator implements AssignModel{
 
     public void setValue(){
         switch (carID.substring(0, 1)) {
-            case "0" -> value = 10 * 100 * 10 / Integer.parseInt(yearOfProduction);
-            case "1" -> value = 20 * 100 * 10 / Integer.parseInt(yearOfProduction);
-            case "2" -> value = 30 * 100 * 10 / Integer.parseInt(yearOfProduction);
-            case "3" -> value = 15 * 100 * 10 / Integer.parseInt(yearOfProduction);
-            case "4" -> value = 15 * 100 * 10 / Integer.parseInt(yearOfProduction);
+            case "0" -> value = 10000 / (2022 - Integer.parseInt(yearOfProduction));
+            case "1" -> value = 20000 / (2022 - Integer.parseInt(yearOfProduction));
+            case "2" -> value = 30000 / (2022 - Integer.parseInt(yearOfProduction));
+            case "3" -> value = 12000 / (2022 - Integer.parseInt(yearOfProduction));
+            case "4" -> value = 15000 / (2022 - Integer.parseInt(yearOfProduction));
         }
         if(color.equals("red")){
             value *= 1.1;
