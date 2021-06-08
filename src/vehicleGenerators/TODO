@@ -1,0 +1,32 @@
+LISTA RZECZY BARDZIEJ I MNIEJ ZROBIONYCH
+
+3    VehicleCreator:
+
+ma nie przyjmowac zadnych danych
+ma sobie losowac id
+jak sobie je wylosuje to ma sprawdzic czy to auto czy ciezarowka
+ma sie wtedy odwolywac albo do CarCreator albo TruckCreator (name pending)
+
+1    vehicles:
+
+zrobic cos z Truck i bedzie git
+
+NOWE ZADANIA NA JUTRO
+
+1    vehicles:
+
+moze motorcycles
+
+1    Garage:
+
+zrob kontrolki co do trzymanych samochodow
+
+2    carMarket:
+
+podobnie do garage ale to sklep wiec tam beda sobie samochodziki do kupienia
+tutaj raczej bedzie generator bo to mala rzecz w sumie
+
+3    clients:
+
+package ktory ma sobie chlopow i oni chca jakies auta
+generator moze tutaj moze gdzies indziej

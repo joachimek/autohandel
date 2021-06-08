@@ -1,5 +1,10 @@
 package vehicles;
-public class Vehicle implements AssignModel {
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class Vehicle{
     //baza samochodu
     //TODO ważne elementy różnych rzeczy i w ogóle
     final protected String carID;
@@ -9,6 +14,7 @@ public class Vehicle implements AssignModel {
     public int mileage;
     public String color;
     final protected String segment;
+    final protected String yearOfProduction;
 
     boolean breaksOk;
     boolean suspensionOk;
@@ -16,7 +22,7 @@ public class Vehicle implements AssignModel {
     boolean bodyOk;
     boolean transmissionOk;
 
-    public Vehicle(String carID, float value, String brand, String model, int mileage, String color, String segment){
+    public Vehicle(String carID, float value, String brand, String model, int mileage, String color, String segment, String yearOfProduction){
     this.carID = carID;
         this.value = value;
         this.brand = brand;
@@ -24,11 +30,10 @@ public class Vehicle implements AssignModel {
         this.mileage = mileage;
         this.color = color;
         this.segment = segment;
+        this.yearOfProduction = yearOfProduction;
     }
 
     public String toString() {
         return carID;
     }
-
-    public void assignModel(){}
 }

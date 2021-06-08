@@ -2,30 +2,15 @@ package vehicles;
 import java.io.*;
 import java.util.Scanner;
 
-public class Car extends Vehicle implements AssignModel {
+public class Car extends Vehicle{
     protected boolean airConditioning;
     protected boolean stockRadio;
 
-    public Car(String carID, float value, String brand, String model, int mileage, String color, String segment, boolean airConditioning, boolean stockRadio) {
-        super(carID, value, brand, model, mileage, color, segment);
+    public Car(String carID, float value, String brand, String model, int mileage, String color, String segment,
+               String yearOfProduction, boolean airConditioning, boolean stockRadio) {
+        super(carID, value, brand, model, mileage, color, segment, yearOfProduction);
         this.airConditioning = airConditioning;
         this.stockRadio = stockRadio;
-    }
-
-
-    public void assignModel(){
-        //TODO zrobić to bo wypierdala exception filenotfound
-        /*Scanner reader = new Scanner(new File("carModels"));
-        for(int i = 0; i < carID.charAt(0); i++){
-            for(int j = 0; j < 5; j++){
-                reader.nextLine();
-            }
-        }
-        for(int i = 0; i < carID.charAt(1); i++){
-            reader.nextLine();
-        }
-        String modelData = reader.nextLine();
-        System.out.println(modelData);*/
     }
 
     @Override
