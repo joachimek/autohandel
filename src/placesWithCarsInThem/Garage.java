@@ -18,4 +18,16 @@ public class Garage {
             System.out.println(vehicle.toString());
         }
     }
+
+    public boolean putInGarage(Vehicle car){
+        for(int i = 0; i < vehiclesInGarage.length; i++){
+            if(vehiclesInGarage[i] == null){
+                vehiclesInGarage[i] = car;
+                System.out.println("udało się dodać auto do garażu");
+                return true;
+            }
+        }
+        System.out.println("no nie wyszło");
+        return false;
+    }
 }

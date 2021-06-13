@@ -7,7 +7,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class VehicleCreator implements AssignModel{
-    final protected String carID;
+    protected String carID;
     protected int value;
     protected String brand;
     protected String model;
@@ -15,14 +15,14 @@ public class VehicleCreator implements AssignModel{
     protected String color;
     protected String segment;
     protected String yearOfProduction;
-
+    private CarIDDistributor distributor = new CarIDDistributor();
 
     public void assignModel(){
         try {
             Scanner reader = new Scanner(new File("carModels.txt"));
             int offset = (Integer.parseInt(carID.substring(0,1)) * 5) + Integer.parseInt(carID.substring(1,2));
             for(int i = 0; i < offset; i++) reader.nextLine();
-            String[] tempParts = reader.nextLine().split("/");
+            String[] tempParts = reader.nextLine().split("/", 3);
             brand = tempParts[0];
             model = tempParts[1];
             segment = tempParts[2];
@@ -66,8 +66,8 @@ public class VehicleCreator implements AssignModel{
         }
     }
 
-    public VehicleCreator(String carID) {
-        this.carID = carID;
+    public VehicleCreator() {
+        this.carID = distributor.giveID();
         assignModel();
         setYearOfProduction();
         setMileage();

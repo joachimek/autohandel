@@ -1,11 +1,13 @@
 package placesWithCarsInThem;
 
 import vehicleGenerators.CarCreator;
+import vehicleGenerators.CarIDDistributor;
 import vehicles.Vehicle;
 
 public class Market{
+    private CarIDDistributor distributor = new CarIDDistributor();
     protected Vehicle[] vehiclesInGarage = new Vehicle[15];
-    protected CarCreator creator = new CarCreator("0101");
+    protected CarCreator creator = new CarCreator();
 
     public void FillMarket(){
         for(int i = 0; i < vehiclesInGarage.length; i++){
