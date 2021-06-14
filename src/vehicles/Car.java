@@ -15,12 +15,13 @@ public class Car extends Vehicle{
 
     @Override
     public String toString() {
-        String returnString = "DANE AUTA: " + "\n\tcena: " + value + "\n\tmarka: " + brand +
+        StringBuilder sb = new StringBuilder();
+        sb.append("DANE AUTA: " + "\n\tcena: " + value + "\n\tmarka: " + brand +
                 "\n\tmodel: " + model + "\n\tprzebieg: " + mileage + "\n\tkolor: "  + color +
-                "\n\tsegment: " + segment;
-        if(airConditioning) returnString += "\n\tz fabrycznym radiem";
-        if(stockRadio) returnString += "\n\tz klimatyzacją";
-        return returnString;
+                "\n\tsegment: " + segment);
+        if(airConditioning) sb.append("\n\tz fabrycznym radiem");
+        if(stockRadio) sb.append("\n\tz klimatyzacją");
+        return String.valueOf(sb);
     }
 
 }

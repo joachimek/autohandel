@@ -7,4 +7,13 @@ public class Truck extends Vehicle{
         super(carID, value, brand, model, mileage, color, segment, yearOfProduction);
         this.capacity = capacity;
     }
+
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("DANE POJAZDU: " + "\n\tcena: " + value + "\n\tmarka: " + brand +
+                "\n\tmodel: " + model + "\n\tprzebieg: " + mileage + "\n\tkolor: "  + color +
+                "\n\tsegment: " + segment);
+        sb.append("\nMIEJSCE ŁADUNKOWE: " + capacity);
+        return String.valueOf(sb);
+    }
 }

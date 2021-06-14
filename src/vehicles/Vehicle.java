@@ -1,5 +1,6 @@
 package vehicles;
 
+import java.io.Console;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -36,4 +37,9 @@ public class Vehicle{
     public String toString() {
         return carID;
     }
+
+    public void repair(boolean part){
+        part = true;
+    }
+
 }
